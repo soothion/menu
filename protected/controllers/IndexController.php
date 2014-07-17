@@ -12,4 +12,8 @@ class IndexController extends Controller{
         $options=array('upload_dir'=>$upload_dir,'upload_url'=>$upload_url);
         $upload_handler = new UploadHandler($options);
     }
+    public function actionList(){
+        $list =  Item::model()->findAll();
+        echo CJSON::encode($list);
+    }
 }

@@ -31,12 +31,32 @@
 
                 <!-- docs content -->
                 <div id="docs-content">
-                    <ul class="menu">
-                        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-                          {{phone.name}}
-                          <p>{{phone.snippet}}</p>
+                    <!--<ul class="menu">
+                        <li ng-repeat="item in items | filter:filter">
+                          {{item.title}}
+                          {{item.price}}
+                          {{item.rid}}
                         </li>
-                    </ul>
+                    </ul>-->
+                    <div class="itemBox">
+                       <span>西红柿炒蛋</span> 
+                    </div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    <div class="itemBox"></div>
+                    
                 </div>
                
             <!-- /docs content -->

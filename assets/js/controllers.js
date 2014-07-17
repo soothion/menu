@@ -1,15 +1,26 @@
-function MenuListCtrl($scope) {
-  $scope.phones = [
-    {"name": "Nexus S",
-     "snippet": "Fast just got faster with Nexus S.",
-     "age": 0},
-    {"name": "Motorola XOOM™ with Wi-Fi",
-     "snippet": "The Next, Next Generation tablet.",
-     "age": 1},
-    {"name": "MOTOROLA XOOM™",
-     "snippet": "The Next, Next Generation tablet.",
-     "age": 2}
-  ];
+var menu = angular.module('myApp', []);
+menu.controller('MenuList', function($scope, $http){
+  $http({method: 'GET', url: 'index.php?r=index/list'}).
+  success(function(data, status, headers, config) {
+    $scope.items = data;
+  }).
+  error(function(data, status, headers, config) {
+      alert('error: ' + data);
+  });
+  
+    $scope.restaurant = function (id) {  
+      $scope.filter.rid=id; 
+    }  
+});
 
-  $scope.orderProp = 'age';
-}
+menu.filter('restaurant', function() {     
+    return function(inputArray) {         
+        var array = []; 
+                for (var i = 0; i < inputArray.length; i++) {             
+                                if (i % 2 !== 0) { 
+                            array.push(inputArray[i]);
+                     }
+                 } 
+                return array;
+         }
+ });

@@ -5770,7 +5770,9 @@ nav#primary ul li a {
 	letter-spacing:1px;
 	text-transform:uppercase;
 	color:#aaa;
-	padding:0 0 0 25px
+	padding:0 0 0 25px;
+        line-height: 34px;
+        height: 34px;
 }
 nav#primary ul li.current-item a,nav#primary ul li a:hover {
 	color:#f4645f
@@ -5856,7 +5858,7 @@ nav#primary ul li.current-item a,nav#primary ul li a:hover {
 }
 #documentation #docs-content {
 	background:#fffefe;
-	width:924px;
+	width:1024px;
 	padding:25px 50px;
 	display:block;
 	float:right
@@ -6137,3 +6139,32 @@ body {
 	color:#ddd
 }
 
+#documentation .itemBox{
+    width:199px;height:200px;border:1px solid #e5e5e5;float:left;margin:15px;position:relative;
+}
+#documentation .itemBox:hover{border:1px solid #f4726d}
+#documentation .itemBox span{
+    position: absolute;
+    bottom: 0;
+    width: 197px;
+    height:30px;
+    padding: 5px 10px;
+    z-index: 5;
+    font-size: 12px;
+    line-height: 22px;
+    color: #aaa;
+    filter: Alpha(opacity=80);
+    overflow: hidden;
+    background-color: #000;
+    cursor: pointer;
+    text-decoration: none!important;
+    -moz-transition-property: opacity;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}

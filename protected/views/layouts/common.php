@@ -1,6 +1,6 @@
 <!doctype html>
 <?php $config = Config::model()->find(); ?>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 
     <head>
         <title><?php echo $config->title; ?><?php if (isset($_REQUEST['alias'])) echo '-' . $_REQUEST['alias'] ?></title>
@@ -17,14 +17,14 @@
         <!-- we're minifying and combining all our css -->
         <link href="assets/css/style.css" rel="stylesheet">
         
-        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
         <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
         
         <script src="assets/js/angular.min.js"></script>
         <script src="assets/js/controllers.js"></script>
         
-        <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
         <!-- some conditionals for ie -->
         <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -35,7 +35,7 @@
         <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
     </head>
 
-    <body id="index" class="page" ng-controller="MenuListCtrl">
+    <body id="index" class="page" ng-controller="MenuList">
         <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6 -->
         <!--[if lt IE 7]>
                 <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
