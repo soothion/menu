@@ -1,0 +1,9 @@
+{
+	"name": "soothion",
+	"description": "火焰雨",
+	"keywords": ["framework", "Yii"],
+	"license": "MIT",
+	"require": {
+		"dflydev/markdown": "1.0.*"
+	}
+}
