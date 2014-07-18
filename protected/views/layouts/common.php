@@ -20,11 +20,15 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
         <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/stickUp.min.js"></script>
         
         <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/i18n/angular-locale_zh-cn.js"></script>
+        <script src="assets/js/shoppingCart.js"></script>
         <script src="assets/js/controllers.js"></script>
         
-        <script src="assets/js/bootstrap.min.js"></script>
+
         <!-- some conditionals for ie -->
         <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
 

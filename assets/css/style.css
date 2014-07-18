@@ -6152,19 +6152,28 @@ body {
     z-index: 5;
     font-size: 12px;
     line-height: 22px;
-    color: #aaa;
+    color: #FFF;
     filter: Alpha(opacity=80);
     overflow: hidden;
     background-color: #000;
     cursor: pointer;
-    text-decoration: none!important;
-    -moz-transition-property: opacity;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -moz-transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-    -moz-transition-timing-function: ease-out;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+}
+#documentation .itemBox span b{
+    float:right;
+    color:#f4726d;
+}
+
+.transparent{
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid #f4726d;
+}
+input.ng-valid.ng-dirty {
+    border: 1px solid green;
 }
