@@ -10,6 +10,8 @@
 
 <ul>
     <li><input ng-model="filter.title" class="form-control" placeholder="Search"></li> 
-    <li><a ng-click="filter.rid=1">一品佳</a></li>
-    <li><a ng-click="filter.rid=2">翠竹园</a></li>
+    <?php foreach($restaurant as $v){?>
+    <li ng-class="{'current-item':filter.rid==<?php echo $v->id?>}"><a ng-click="filter.rid=<?php echo $v->id?>"><?php echo $v->title?></a></li>
+    <?php }?>
+    <li ng-class="{'current-item':filter.rid==''}"><a ng-click="filter.rid=''">All</a></li>
 </ul>

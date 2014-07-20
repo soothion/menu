@@ -3,6 +3,7 @@
 //
 function shoppingCart(cartName) {
     this.cartName = cartName;
+    this.note = '';
     this.clearCart = false;
     this.checkoutParameters = {};
     this.items = [];

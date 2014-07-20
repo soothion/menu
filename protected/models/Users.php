@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "{{user}}".
+ * This is the model class for table "{{users}}".
  *
- * The followings are the available columns in table '{{user}}':
+ * The followings are the available columns in table '{{users}}':
  * @property integer $id
  * @property string $username
  * @property string $password
@@ -11,14 +11,15 @@
  * @property string $tel
  * @property string $qq
  * @property string $skype
+ * @property string $alipay
  * @property string $addtime
  */
-class User extends CActiveRecord
+class Users extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Users the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +31,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{user}}';
+		return '{{users}}';
 	}
 
 	/**
@@ -47,9 +48,10 @@ class User extends CActiveRecord
 			array('name, skype', 'length', 'max'=>20),
 			array('tel', 'length', 'max'=>11),
 			array('qq', 'length', 'max'=>12),
+                        array('alipay', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, name, tel, qq, skype, addtime', 'safe', 'on'=>'search'),
+			array('id, username, password, name, tel, qq, skype, alipay, addtime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,6 +79,7 @@ class User extends CActiveRecord
 			'tel' => 'Tel',
 			'qq' => 'QQ',
 			'skype' => 'Skype',
+			'alipay' => 'Alipay',
 			'addtime' => 'Addtime',
 		);
 	}
@@ -99,6 +102,7 @@ class User extends CActiveRecord
 		$criteria->compare('tel',$this->tel,true);
 		$criteria->compare('qq',$this->qq,true);
 		$criteria->compare('skype',$this->skype,true);
+		$criteria->compare('alipay',$this->alipay,true);
 		$criteria->compare('addtime',$this->addtime,true);
 
 		return new CActiveDataProvider($this, array(

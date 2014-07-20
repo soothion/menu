@@ -41,7 +41,7 @@ Yii::app()->bootstrap->register();//载入boostrap
                             array('label'=>'饭店管理', 'url'=>array('/admin/restaurant/admin')),
                             array('label'=>'菜单管理', 'url'=>array('/admin/item/admin')),
                             array('label'=>'订单管理', 'url'=>array('/admin/order/admin')),
-                            array('label'=>'用户管理', 'url'=>array('/admin/user/admin')),
+                            array('label'=>'用户管理', 'url'=>array('/admin/users/admin')),
                             array('label'=>'模块管理', 'url'=>array('/admin/module/admin')),
                         ),
                     ),

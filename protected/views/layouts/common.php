@@ -18,9 +18,12 @@
         <link href="assets/css/style.css" rel="stylesheet">
         
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 
         <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
         <script src="assets/js/stickUp.min.js"></script>
         
         <script src="assets/js/angular.min.js"></script>

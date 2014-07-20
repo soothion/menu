@@ -8,7 +8,8 @@
 
 class NavWidget extends CWidget {
     public function run() {
-        $this->render('nav');
+        $restaurant=  Restaurant::model()->findAll();
+        $this->render('nav',array('restaurant'=>$restaurant));
     }
 }
 

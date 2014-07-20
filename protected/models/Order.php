@@ -55,8 +55,8 @@ class Order extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'user'=>array(self::BELONGS_TO, 'User', 'uid'),
-                    'pay'=>array(self::BELONGS_TO, 'User', 'pay'),
+                    'user'=>array(self::BELONGS_TO, 'Users', 'uid'),
+                    'pay'=>array(self::BELONGS_TO, 'Users', 'pay'),
                     
 		);
 	}

@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'用户'
 );
-$create=Yii::app()->createUrl('admin/user/create');
+$create=Yii::app()->createUrl('admin/users/create');
 ?>
 
 
@@ -15,12 +15,11 @@ $create=Yii::app()->createUrl('admin/user/create');
 	'columns'=>array(
 		'id',
 		'username',
-		'password',
 		'name',
 		'tel',
 		'qq',
 		'skype',
-		'addtime',
+		'alipay',
 		array(
                         'header'=>'<a href="'.$create.'"><i class="icon-plus"></i></a>',
 			'class'=>'bootstrap.widgets.TbButtonColumn',

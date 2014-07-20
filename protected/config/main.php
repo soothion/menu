@@ -8,7 +8,7 @@
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__) . '/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'饭否',
+	'name'=>'饭',
         'defaultController' => 'index',
         'theme' => 'bootstrap',
 	// preloading 'log' component
@@ -41,10 +41,12 @@ return array(
                 'bootstrap' => array(
                         'class' => 'bootstrap.components.Bootstrap',
                 ),
-		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+            'user' => array(
+                // enable cookie-based authentication
+                'class' => 'User',
+                'allowAutoLogin' => true,
+                'stateKeyPrefix' => 'user',
+            ),
             
             'admin' => array(
                 // enable cookie-based authentication

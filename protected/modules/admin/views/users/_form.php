@@ -15,12 +15,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('class'=>'span5','maxlength'=>50)); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('class'=>'span5','maxlength'=>50)); ?>
 		<?php echo $form->error($model,'name'); ?>

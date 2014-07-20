@@ -13,8 +13,9 @@ $create=Yii::app()->createUrl('admin/order/create');
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
 		'id',
-                array('name'=>'uid','value'=>'$data->user->username'),
+                array('name'=>'uid','value'=>'@$data->user->username'),
 		'status',
+                'note',
 		array('name'=>'pay','value'=>'@$data->pay->username?"$data->pay->username":"none"'),
 		'addtime',
 		array(
