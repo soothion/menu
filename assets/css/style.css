@@ -6146,6 +6146,7 @@ body {
 #documentation .itemBox span{
     position: absolute;
     bottom: 0;
+    left:0;
     width: 197px;
     height:30px;
     padding: 5px 10px;

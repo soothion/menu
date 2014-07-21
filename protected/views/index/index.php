@@ -199,7 +199,7 @@
     <form name="login" novalidate  ng-submit="loginCtrl()">
       <div class="modal-body">
         <fieldset>
-                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=6 ng-maxlength=16 />
+                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=4 ng-maxlength=16 />
                   <input type="password" placeholder="密码" class="form-control" required ng-model="user.password" ng-minlength=6 ng-maxlength=16 />
         </fieldset>
       </div>
@@ -221,9 +221,9 @@
       <form name="signin" novalidate  ng-submit="registerCtrl()">
         <div class="modal-body">
           <fieldset>
-                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=6 ng-maxlength=16 />
+                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=4 ng-maxlength=16 />
                   <input type="password" placeholder="密码" class="form-control" required ng-model="user.password" ng-minlength=6 ng-maxlength=16 />
-                  <input type="text" placeholder="尊姓大名" class="form-control" required ng-model="user.name" ng-minlength=6 ng-maxlength=20 />
+                  <input type="text" placeholder="尊姓大名" class="form-control" required ng-model="user.name" ng-minlength=2 ng-maxlength=20 />
           </fieldset>
         </div>
         <div class="modal-footer">
@@ -245,9 +245,9 @@
       <form name="info" novalidate  ng-submit="infoCtrl()">
         <div class="modal-body">
           <fieldset>
-                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=6 ng-maxlength=16 />
+                  <input type="text" placeholder="用户名" class="form-control" required ng-model="user.username" ng-minlength=4 ng-maxlength=16 />
                   <input type="password" placeholder="密码" class="form-control"  ng-model="user.password" ng-minlength=6 ng-maxlength=16 />
-                  <input type="text" placeholder="尊姓大名" class="form-control" required ng-model="user.name" ng-minlength=6 ng-maxlength=20 />
+                  <input type="text" placeholder="尊姓大名" class="form-control" required ng-model="user.name" ng-minlength=2 ng-maxlength=20 />
                   <input type="text" placeholder="电话" class="form-control"  ng-model="user.tel" ng-minlength=7 ng-maxlength=11 />
                   <input type="text" placeholder="QQ" class="form-control"  ng-model="user.qq" ng-minlength=5 ng-maxlength=10 />
                   <input type="text" placeholder="skype" class="form-control"  ng-model="user.skype" ng-minlength=6 ng-maxlength=50 />

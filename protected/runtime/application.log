@@ -8095,3 +8095,394 @@ in D:\wamp\www\menu\index.php (13)
 2014/07/20 16:57:59 [warning] [application] Failed to set unsafe attribute "verifyCode" of "LoginForm".
 in D:\wamp\www\menu\protected\modules\admin\controllers\LoginController.php (29)
 in D:\wamp\www\menu\index.php (13)
+2014/07/21 03:10:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'menu.menu_users' n'existe pas. The SQL statement executed was: SELECT `u`.`username`, `o`.*
+FROM `menu_users` `u`
+JOIN `menu_order` `o` ON u.id=o.uid.
+in E:\wamp\www\menu\protected\controllers\OrderController.php (9)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:10:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'menu.menu_users' n'existe pas. The SQL statement executed was: SELECT `u`.`username`, `o`.*
+FROM `menu_users` `u`
+JOIN `menu_order` `o` ON u.id=o.uid' in E:\wamp\www\menu\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\wamp\www\menu\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\wamp\www\menu\protected\controllers\OrderController.php(9): CDbCommand->queryAll()
+#2 E:\wamp\www\menu\framework\web\actions\CInlineAction.php(49): OrderController->actionIndex()
+#3 E:\wamp\www\menu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\wamp\www\menu\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\wamp\www\menu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\wamp\www\menu\framework\web\CWebApplication.php(282): CController->run('index')
+#7 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController('order/index')
+#8 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 E:\wamp\www\menu\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/menu/index.php?r=order/index
+HTTP_REFERER=http://localhost/menu/
+---
+2014/07/21 03:10:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'menu.menu_users' n'existe pas. The SQL statement executed was: SHOW FULL COLUMNS FROM `menu_users`.
+in E:\wamp\www\menu\protected\models\Users.php (26)
+in E:\wamp\www\menu\protected\controllers\IndexController.php (107)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:10:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "Users" cannot be found in the database.' in E:\wamp\www\menu\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Users))
+#1 E:\wamp\www\menu\protected\models\Users.php(26): CActiveRecord::model('Users')
+#2 E:\wamp\www\menu\protected\controllers\IndexController.php(107): Users::model()
+#3 E:\wamp\www\menu\framework\web\actions\CInlineAction.php(49): IndexController->actionUser()
+#4 E:\wamp\www\menu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\wamp\www\menu\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 E:\wamp\www\menu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\wamp\www\menu\framework\web\CWebApplication.php(282): CController->run('user')
+#8 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController('index/user')
+#9 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 E:\wamp\www\menu\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/menu/index.php?r=index/user
+HTTP_REFERER=http://localhost/menu/
+---
+2014/07/21 03:12:16 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:29:14 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:29:19 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:30:41 [warning] [application] Failed to set unsafe attribute "verifyCode" of "LoginForm".
+in E:\wamp\www\menu\protected\modules\admin\controllers\LoginController.php (29)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:33:54 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:34:28 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:34:28 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:34:28 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:35:05 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:36:48 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:37:21 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:37:21 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:37:21 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:38:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ().
+in E:\wamp\www\menu\protected\controllers\OrderController.php (51)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:38:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ()' in E:\wamp\www\menu\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\wamp\www\menu\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\wamp\www\menu\protected\controllers\OrderController.php(51): CActiveRecord->findAll('id in ()')
+#4 E:\wamp\www\menu\framework\web\actions\CInlineAction.php(49): OrderController->actionSubmit()
+#5 E:\wamp\www\menu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 E:\wamp\www\menu\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 E:\wamp\www\menu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\wamp\www\menu\framework\web\CWebApplication.php(282): CController->run('submit')
+#9 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController('order/submit')
+#10 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\wamp\www\menu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/menu/index.php?r=order/submit
+HTTP_REFERER=http://192.168.1.196/menu/index.php?r=index
+---
+2014/07/21 03:38:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ().
+in E:\wamp\www\menu\protected\controllers\OrderController.php (21)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:38:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ()' in E:\wamp\www\menu\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\wamp\www\menu\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\wamp\www\menu\protected\controllers\OrderController.php(21): CActiveRecord->findAll('id in ()')
+#4 E:\wamp\www\menu\framework\web\actions\CInlineAction.php(49): OrderController->actionDelete()
+#5 E:\wamp\www\menu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 E:\wamp\www\menu\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 E:\wamp\www\menu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\wamp\www\menu\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController('order/delete')
+#10 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\wamp\www\menu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/menu/index.php?r=order/delete
+HTTP_REFERER=http://192.168.1.196/menu/index.php?r=index
+---
+2014/07/21 03:38:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ().
+in E:\wamp\www\menu\protected\controllers\OrderController.php (51)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:38:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 Erreur de syntaxe près de ')' à la ligne 1. The SQL statement executed was: SELECT * FROM `menu_order` `t` WHERE id in ()' in E:\wamp\www\menu\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\wamp\www\menu\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 E:\wamp\www\menu\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 E:\wamp\www\menu\protected\controllers\OrderController.php(51): CActiveRecord->findAll('id in ()')
+#4 E:\wamp\www\menu\framework\web\actions\CInlineAction.php(49): OrderController->actionSubmit()
+#5 E:\wamp\www\menu\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 E:\wamp\www\menu\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 E:\wamp\www\menu\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\wamp\www\menu\framework\web\CWebApplication.php(282): CController->run('submit')
+#9 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController('order/submit')
+#10 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\wamp\www\menu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/menu/index.php?r=order/submit
+HTTP_REFERER=http://192.168.1.196/menu/index.php?r=index
+---
+2014/07/21 03:42:18 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:42:19 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:42:26 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:42:26 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:42:26 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:46:12 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:46:39 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:46:58 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:48:21 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:48:39 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:49:18 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:49:22 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:49:34 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:49:44 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:49:49 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:21 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:21 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:21 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:40 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:40 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:51:40 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (79)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:53:53 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:16 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:19 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:19 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:19 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:19 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:20 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:21 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:24 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:25 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:27 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:28 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:29 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:32 [error] [php] Undefined index: username (E:\wamp\www\menu\protected\controllers\IndexController.php:72)
+Stack trace:
+#0 E:\wamp\www\menu\framework\web\CController.php(286): IndexController->runAction()
+#1 E:\wamp\www\menu\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 E:\wamp\www\menu\framework\web\CWebApplication.php(282): IndexController->run()
+#3 E:\wamp\www\menu\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\wamp\www\menu\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 E:\wamp\www\menu\index.php(13): CWebApplication->run()
+REQUEST_URI=/menu/index.php?r=index/register
+in E:\wamp\www\menu\protected\controllers\IndexController.php (72)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 03:54:37 [warning] [application] Failed to set unsafe attribute "r" of "Users".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (75)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 04:09:44 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 04:09:44 [warning] [application] Failed to set unsafe attribute "name" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
+2014/07/21 04:11:30 [warning] [application] Failed to set unsafe attribute "r" of "LoginForm".
+in E:\wamp\www\menu\protected\controllers\IndexController.php (91)
+in E:\wamp\www\menu\index.php (13)
